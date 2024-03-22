@@ -20,7 +20,7 @@ function Form() {
       <br/>
 
       <label> Age: </label>
-      <input onChange={((e) => {setFname(e.target.value)})} />
+      <input type="number" onChange={((e) => {setFname(e.target.value)})} />
     </div>
   )
 }

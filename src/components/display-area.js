@@ -18,6 +18,7 @@ function DisplayArea() {
 
     return (
         <div>
+            
             {employees.map((emp) => {
                 return <div> 
                     {" "}
