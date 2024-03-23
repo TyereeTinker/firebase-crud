@@ -1,6 +1,6 @@
 import { React, useState, useEffect } from 'react';
 import { db } from './firestore-config';
-import { collection, getDocs } from 'firebase/firestore';
+import { collection, getDocs, deleteDoc, doc } from 'firebase/firestore';
 
 function DisplayArea() {
 
@@ -16,19 +16,25 @@ function DisplayArea() {
       getEmployees();
     }, [])
 
+    const deleteEmployee = async(id) =>{
+        const empDoc = doc(db, "Employees", id)
+        await deleteDoc(empDoc)
+    } 
+
     return (
         <div>
             
             {employees.map((emp) => {
                 return <div> 
                     {" "}
-                    <h1> {emp.Fname} {emp.Lname} </h1>
+                    <h2> {emp.Fname} {emp.Lname} </h2>
                     <h2> ${emp.Salary} </h2>
                     <ul>
                         {emp.Skills.map((skill, index) => (
                         <li key={index}>{skill}</li> ))}
                     </ul>
-            </div>
+                    <button onClick={() => {deleteEmployee(emp.id)}}> DELETE USER </button>
+                </div>
             })}
         </div>
     )

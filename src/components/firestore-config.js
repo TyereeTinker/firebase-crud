@@ -4,19 +4,20 @@ import { getFirestore } from "@firebase/firestore";
 
 const firebaseConfig = {
 
-    apiKey: process.env.API_KEY,
-  
-    authDomain: process.env.AUTH_DOMAIN,
-  
-    projectId: process.env.PROJECT_ID,
-  
-    storageBucket: process.env.STORAGE_BUCKET,
-  
-    messagingSenderId: process.env.MESSAGE,
-  
-    appId: process.env.APP_ID
-  
-  };
+  apiKey: "AIzaSyCSbJk82aBkNSHMXW2xM7IBmrzgnbdcT5w",
+
+  authDomain: "fir-crud-app-7280e.firebaseapp.com",
+
+  projectId: "fir-crud-app-7280e",
+
+  storageBucket: "fir-crud-app-7280e.appspot.com",
+
+  messagingSenderId: "390870580993",
+
+  appId: "1:390870580993:web:ea7686c4953f9ab40e2500"
+
+};
+
   
   // Initialize Firebase
 const app = initializeApp(firebaseConfig);
