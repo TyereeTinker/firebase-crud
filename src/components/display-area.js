@@ -23,12 +23,12 @@ function DisplayArea() {
 
     return (
         <div>
-            
             {employees.map((emp) => {
-                return <div> 
+                return <div className='emp-data'> 
                     {" "}
-                    <h2> {emp.Fname} {emp.Lname} </h2>
-                    <h2> ${emp.Salary} </h2>
+                    <h3> NAME: {emp.Fname} {emp.Lname} </h3>
+                    <h3> SALARY: ${emp.Salary} </h3>
+                    <h3> SKILLS </h3>
                     <ul>
                         {emp.Skills.map((skill, index) => (
                         <li key={index}>{skill}</li> ))}

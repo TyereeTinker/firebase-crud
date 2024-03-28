@@ -1,0 +1,22 @@
+
+.form-box {
+    width: fit-content;
+    height: fit-content;
+    align-self: center;
+    background-color: aqua;
+    padding: 2%;
+    margin: auto;
+    box-shadow: inset;
+    border-radius: 5px;
+}
+
+.emp-data {
+    width: 25%;
+    height: fit-content;
+    align-self: center;
+    background-color: aqua;
+    padding: 2%;
+    margin: 5px;
+    align-items: center;
+    border-radius: 5px;
+}

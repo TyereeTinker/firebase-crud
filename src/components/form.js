@@ -2,6 +2,7 @@
 import { React, useState } from 'react'
 import { db } from './firestore-config';
 import { collection, addDoc } from 'firebase/firestore';
+import "./style.css"
 
 function Form() {
 
@@ -33,8 +34,8 @@ function Form() {
 
 
   return (
-    <div> 
-      <label> First Name: </label>
+    <div className='form-box'> 
+      <label> First Name:  </label>
       <input type="text" onChange={((e) => {setFname(e.target.value)})} /> 
       <br/>
 
